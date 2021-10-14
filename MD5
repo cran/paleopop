@@ -1,7 +1,7 @@
-1cbd1b8b56271e94380d8b874a9b7002 *DESCRIPTION
+e5572d892d4312605b8c8c0f6c788941 *DESCRIPTION
 ce4c9339144db9c0516ca33f852484f0 *NAMESPACE
-ae8756bd6e386412f4fbbe7fc84c16ba *NEWS.md
-f6a5ee1ba05c3e2a9505e93718ecd329 *R/PaleoPopModel.R
+361f48f41c44d76e4c01c08ca6132110 *NEWS.md
+23023321776c2258447927164c0274ae *R/PaleoPopModel.R
 8fd6a430aaa177fa200fa1937e00728b *R/PaleoPopResults.R
 eb6d3bc3d43367ac146e99ecd7d1aa14 *R/PaleoRegion.R
 9df7b5a6f5343aeb0c32cbf0fc277b35 *R/data.R
@@ -9,13 +9,13 @@ eb6d3bc3d43367ac146e99ecd7d1aa14 *R/PaleoRegion.R
 df1db274c7ed20d7c58408d7a10a9cae *R/paleopop_simulator.R
 db7ad6e29b54ea67f4b820bf01768e2b *R/region_subset.R
 cd45bc6df62e01b9ede1a1e753fe50bb *README.md
-34c74fe61c2b7a516281778d25e20590 *build/vignette.rds
+87798051394be933a2320c552a5cc87e *build/vignette.rds
 2b36857a1aef90d0cdec943bf2cee669 *data/bison_hs_raster.rda
 19c16db1ce09c82eb138d19a931987af *data/siberia_raster.rda
 395d3ec6be1b81e094a0384939e876f9 *inst/doc/bison_example.R
 dfa609f7345111fa5e341d8d3eb3127a *inst/doc/bison_example.Rmd
-f143f1d9b7305d698ef6c947b1f8feb7 *inst/doc/bison_example.html
-43e9644e975c2bc19e3f145ddc3fbd1e *man/PaleoPopModel.Rd
+8fea872808c5a76349dc4c72fb09dba0 *inst/doc/bison_example.html
+62b772ba003217f1f24791eaeb967fc3 *man/PaleoPopModel.Rd
 dbf9e5828c3672f6015a213263d389db *man/PaleoPopResults.Rd
 9031e1e81d4f40bcd385c5ca30ff5ccc *man/PaleoRegion.Rd
 ea314e9c1d440a6733b0a414a6115c83 *man/bison_hs_raster.Rd
