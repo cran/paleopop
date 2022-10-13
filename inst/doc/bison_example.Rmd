@@ -38,7 +38,7 @@ for simulation and an output directory for results.
 ```{r setup}
 library(poems)
 library(paleopop)
-parallel_cores <- 2
+parallel_cores <- 1
 output_dir <- tempdir()
 ```
 
@@ -262,12 +262,12 @@ values so as to create a prior, and use these to parameterize different
 simulations. Here, we will sample each range of values *uniformly* so as
 to create an *uninformative* prior, but the LHS generator object offers
 options for sampling along different distributions to create an
-*informative* prior. For the sake of this example, we will sample 100
-different parameter combinations, but it is advisable to run more in
-order to fully sample the parameter space.
+*informative* prior. For the sake of this example, we will sample 10
+different parameter combinations, but it is advisable to run thousands
+in order to fully sample the parameter space.
 
 ```{r latin hypercube sampling}
-nsims <- 100 # adjust to run your own example if desired
+nsims <- 10 # adjust to run your own example if desired
 
 lhs_generator <- LatinHypercubeSampler$new()
 lhs_generator$set_uniform_parameter("standard_deviation", lower = 0, upper = sqrt(0.06))
@@ -361,19 +361,15 @@ error messages for failed calculations.
 
 Now that we've calculated some summary metrics, based on outputs from
 `PaleoPopResults` like extinction time and abundance trend, we can
-examine the simulation results.
+examine the simulation results. Here I show the simulated extinction times.
 
 ```{r histograms, fig.align = "center", fig.width = 7, fig.height = 5}
-hist(metrics_manager$summary_metric_data$abundance_trend, 
-     main = "Histogram of abundance trend", xlab = "Abundance trend")
-hist(metrics_manager$summary_metric_data$extinction_time, 
-     main = "Histogram of extinction time", xlab = "Extinction time (years BP)")
+metrics_manager$summary_metric_data$extinction_time
 ```
 
-Looking at these results, both of these summary metrics, abundance trend
+Both of these summary metrics, abundance trend
 over the first ten time steps and extinction time, could be a suitable
-metric to converge toward a validation target, since there is a spread
-of outcomes.
+metric to converge toward a validation target.
 
 From here, you may continue with the `poems` workflow, as explained in
 the `poems`

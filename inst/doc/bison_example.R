@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
 ## ----setup--------------------------------------------------------------------
 library(poems)
 library(paleopop)
-parallel_cores <- 2
+parallel_cores <- 1
 output_dir <- tempdir()
 
 ## ----siberia_raster, fig.align = "center", fig.width = 7, fig.height = 5------
@@ -119,7 +119,7 @@ model_template <- PaleoPopModel$new(
 )
 
 ## ----latin hypercube sampling-------------------------------------------------
-nsims <- 100 # adjust to run your own example if desired
+nsims <- 10 # adjust to run your own example if desired
 
 lhs_generator <- LatinHypercubeSampler$new()
 lhs_generator$set_uniform_parameter("standard_deviation", lower = 0, upper = sqrt(0.06))
@@ -179,8 +179,5 @@ metrics_manager$summary_functions$abundance_trend <- function(simulation_results
 gen_log <- metrics_manager$generate(results_dir = output_dir)
 
 ## ----histograms, fig.align = "center", fig.width = 7, fig.height = 5----------
-hist(metrics_manager$summary_metric_data$abundance_trend, 
-     main = "Histogram of abundance trend", xlab = "Abundance trend")
-hist(metrics_manager$summary_metric_data$extinction_time, 
-     main = "Histogram of extinction time", xlab = "Extinction time (years BP)")
+metrics_manager$summary_metric_data$extinction_time
 
