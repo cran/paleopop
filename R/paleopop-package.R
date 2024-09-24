@@ -1,3 +1,5 @@
+#' @keywords internal
+"_PACKAGE"
 #' paleopop: Ensemble population modeling and simulation on paleo time scales
 #'
 #' The \code{paleopop} package is an extension of the \code{\link[poems:poems]{poems}} framework of \code{\link[R6:R6Class]{R6}} classes, which 
@@ -16,12 +18,11 @@
 #'     \code{\link[poems:SimulationModel]{SimulationModel}}, this class encapsulates the input parameters
 #'     utilized by the \code{\link{paleopop_simulator}}.
 #'   \item \code{\link{PaleoPopResults}} class: Inherited from
-#'     \code{\link{SimulationResults}}, this class encapsulates the results generated
+#'     \code{\link[poems:SimulationResults]{SimulationResults}}, this class encapsulates the results generated
 #'     by the \code{\link{paleopop_simulator}}, as well as dynamically generating
 #'     additional derived results.
 #' }
 #' 
-#' @docType package
 #' @name paleopop
 #' @importFrom utils read.csv read.table
 NULL
