@@ -14,12 +14,20 @@ status](https://www.r-pkg.org/badges/version/paleopop)](https://CRAN.R-project.o
 commit](https://img.shields.io/github/last-commit/GlobalEcologyLab/paleopop.svg)](https://github.com/GlobalEcologyLab/paleopop/commits/master)
 <!-- badges: end -->
 
-`paleopop` is an extension to `poems`, a spatially-explicit,
+`paleopop` is part of the poemsverse. `poems` is a spatially-explicit,
 process-explicit, pattern-oriented framework for modeling population
 dynamics. This extension adds functionality for modeling large
 populations at generational time-steps over paleontological time-scales.
 
 ## Installation
+
+You can install the latest release of `paleopop` from CRAN with:
+
+``` r
+install.packages("paleopop")
+#> Installing package into '/home/runner/work/_temp/Library'
+#> (as 'lib' is unspecified)
+```
 
 You can install the development version from
 [GitHub](https://github.com/) with:
@@ -116,23 +124,23 @@ results <- paleopop_simulator(model_template)
 results # examine
 #> $abundance
 #>       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-#>  [1,]    0    0    0    0    0    0    0    0    0     0
-#>  [2,]   39   84  154  263  404  541  763  740  925  1144
-#>  [3,]   20   48   88  166  249  388  488  620  633   728
-#>  [4,]    0    0    0    0    0    0    0    0    0     0
-#>  [5,]  220  297  461  641  879  983  908  936 1095   831
-#>  [6,]  398  555  747  776 1076  896  939  912  984   936
-#>  [7,]  726  820 1007 1053 1068 1063  857  865  982  1096
-#>  [8,] 1189  778  856  856  939  871  826  927  996  1191
-#>  [9,] 1174  979  806  928  931  997  938  923  980   866
+#>  [1,]   88  150  258  403  606  902 1049  962 1096  1400
+#>  [2,]  330  563  733  794  701  781  786  865  964  1104
+#>  [3,] 1199 1104  991 1087 1257 1062  998 1016 1025  1055
+#>  [4,]  306  465  655  681  954  959  955  934 1008   813
+#>  [5,]  101  150  248  369  488  674  826  973 1048  1038
+#>  [6,]  336  468  639  687  840  929  972  957 1028   991
+#>  [7,]  575  634  888  929  970  907  912 1022 1058   905
+#>  [8,] 1123 1086 1140 1215 1140  836  955  934  938   826
+#>  [9,]  961  834  908  947 1045  980  964  958 1070   904
 #> [10,]    0    0    0    0    0    0    0    0    0     0
 #> [11,]    0    0    0    0    0    0    0    0    0     0
 #> [12,]    0    0    0    0    0    0    0    0    0     0
-#> [13,]  157  288  474  658  806  843  930  951  959   905
-#> [14,]  252  405  606  792  882  976 1011 1130 1113  1113
-#> [15,]  113  209  344  468  633  808  842 1120 1189   990
-#> [16,]  691  746  994  783  843  922  958  915 1101   922
-#> [17,]  540  729  937  930  862  915  895  758  958  1039
+#> [13,]  497  666  912 1033  997  972 1023  924  923   929
+#> [14,]   64   92  180  258  450  552  761 1039  990  1067
+#> [15,]  595  720  881  779 1016  984  933  973 1156  1091
+#> [16,]  452  742  850  931  950 1050 1017 1093 1007  1046
+#> [17,] 1182 1017 1151 1119  904  689  854  904  890   958
 raster::plot(region$raster_from_values(results$abundance[,10]),
              main = "Final abundance", xlab = "Longitude (degrees)", 
              ylab = "Latitude (degrees)", colNA = "blue")
